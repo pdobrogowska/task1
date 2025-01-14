@@ -1,0 +1,27 @@
+You need to create an interface that allows the following sequence of actions:
+
+- Transform the current system time into a string (time -> string).
+- Save this transformed string to a database.
+- Send this transformed string to another system.
+
+
+Based on the client’s business requirements, there are currently two types of transformations needed:
+1. Convert the current system time into the string "Before/After noon" (now -> "Before noon"; now -> "After noon").
+2. Convert the current system time into a string with the format "dd.MM.yyyy" (now -> "dd.MM.yyyy").
+
+
+It’s expected that in the future, new requirements will be added.
+This means new algorithms will be needed to transform the current system time into different strings.
+However, we don’t yet know what those requirements will be.
+
+
+Your task is to create a function that transforms the current system time into a string.
+After that, the transformed string should be saved to a database and sent to an external system.
+
+The function must be callable from the FooController.
+
+In this task, you can use the current system time. If a time zone is needed, assume it will always be UTC.
+
+You cannot edit the pom.xml file, so you must work with the dependencies that are already available.
+
+You are not allowed to edit the following classes: Foo, FooId, FooMockConfiguration, FooRepository, and ExternalSystemAdapter
